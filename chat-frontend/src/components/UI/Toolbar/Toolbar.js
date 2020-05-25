@@ -7,7 +7,7 @@ import AnonymousMenu from './Menus/AnonymousMenu';
 const Toolbar = ({user, logout}) => {
     return (
         <Navbar color="dark" dark expand="md">
-            <NavbarBrand tag={RouterNavLink} to="/">Chat</NavbarBrand>
+            <NavbarBrand tag={RouterNavLink} to="/">Chat App</NavbarBrand>
             <Nav className="ml-auto" navbar>
                 {user ? <UserMenu user={user} logout={logout}/> : <AnonymousMenu/>}
             </Nav>
