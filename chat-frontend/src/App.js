@@ -4,6 +4,7 @@ import {Container} from "reactstrap";
 import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {NotificationContainer} from "react-notifications";
+import Toolbar from "./components/UI/Toolbar/Toolbar";
 
 
 import Routes from "./Routes";
@@ -14,8 +15,12 @@ class App extends Component {
     return (
         <Fragment>
           <NotificationContainer/>
-          <header>
-          </header>
+            <header>
+                <Toolbar
+                    user={this.props.user}
+                    logout={this.props.logoutUser}
+                />
+            </header>
           <Container style={{marginTop: '20px'}}>
             <Routes
                 user={this.props.user}
