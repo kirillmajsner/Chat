@@ -1,10 +1,11 @@
 const express = require('express');
+const app = express();
+const expressWs = require('express-ws')(app);
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-const app = express();
-
 const user = require('./app/user');
+const chat = require('./app/chat');
 const config = require('./config');
 
 
@@ -16,6 +17,7 @@ const port = 8000;
 
 mongoose.connect(config.dbUrl, config.mongoOptions).then(() => {
     app.use('/user', user);
+    app.use('/chat', chat);
 });
 
 
