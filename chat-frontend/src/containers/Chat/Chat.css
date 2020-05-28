@@ -1,0 +1,42 @@
+
+.main-chat-block {
+    display: flex;
+}
+
+.users-block {
+    width: 20%;
+    border: 1px solid black;
+    margin: 0 20px 0 10px;
+    padding: 10px;
+}
+
+.chat-block {
+    height: 90vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.messages-block {
+    width: 100%;
+    height: 90%;
+    border: 1px solid black;
+    overflow: auto;
+    padding: 10px;
+}
+
+.message-input {
+    width: 400px !important;
+    height: 50px;
+}
+
+.send-message {
+    width: 300px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+.moderator {
+    color: red
+}
